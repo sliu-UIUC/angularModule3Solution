@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="en" ng-app='searchListApp'>
+    <head>
+      <title>Narrow Down Your Menu Choice</title>
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+      <script src="angular.min.js"></script>
+      <script src="app.js"></script>
+      <link rel="stylesheet" href="styles/bootstrap.min.css">
+      <link rel="stylesheet" href="styles/styles.css">
+    </head>
+  <body>
+    <div ng-controller="searchListController as list" class="container">
+      <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+      <div class="form-group">
+        <input type="text" placeholder="search term" class="form-control" ng-model="list.searchTerm">
+      </div>
+      <div class="form-group narrow-button">
+        <button class="btn btn-primary">Narrow It Down For Me!</button>
+      </div>
+      <br> 
+
+
+      <search-list
+        found = "list.found"
+        search-term = "list.searchTerm"
+        on-remove = "list.removeItem(index)"
+      >
+      </search-list>
+    </div>
+
+  </body>
+</html>
