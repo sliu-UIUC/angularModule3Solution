@@ -37,17 +37,9 @@
 
     list.getItems = function(searchTerm) {
       var tmp = searchListService.getMatchedItems();
-      // console.log(searchListService.getMatchedItems());
-      // var i = 0;
-      // for(; i<tmp.length; ++i) {
-      //   var j = 0;
-      //   console.log(tmp[i]);
-      //   for(;j<tmp[i].length;++j) {
-      //     list.found.push(tmp[i][j]);
-      //   }
-      // }
+
       console.log('Json value: ');
-      console.log(tmp.$$state.value);
+      console.log(tmp);
       console.log('aaa');
     }
 
