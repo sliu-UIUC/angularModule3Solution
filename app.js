@@ -31,17 +31,22 @@
     list.searchTerm = "";
     list.found = [];
 
-    list.removeItem = function(index, items) {
-      items.splice(index,1);
+    list.removeItem = function(index) {
+      list.found.splice(index,1);
     }
-    
+
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
         list.found = items;
         console.log(list.searchTerm)
        //  list.found = items; 
-       console.log("Found: ", list.found);
+       var l, i; 
+       for(l in items.value) {
+         for(i in l.value) {
+           console.log(i);
+         }
+       }
       });
     }
   }

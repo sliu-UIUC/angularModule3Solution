@@ -3,7 +3,7 @@
 
       <li ng-repeat="item in items">
         <p>{{item.name}}</p>
-        <button ng-click="list.onRemove({index: $index}, items);">Don't want this one!</button>
+        <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
       </li>
   </div>
 </ol>
