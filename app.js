@@ -36,7 +36,8 @@
     }
 
     list.getItems = function(searchTerm) {
-      var tmp = searchListService.getMatchedItems()[0];
+      list.found = searchListService.getMatchedItems()[0];
+      
       // var i = 0;
       // for(; i<tmp.length; ++i) {
       //   var j = 0;
