@@ -37,7 +37,7 @@
 
     list.getItems = function(searchTerm) {
       list.found = searchListService.getMatchedItems();
-      console.log(searchListService.getMatchedItems());
+      // console.log(searchListService.getMatchedItems());
       // var i = 0;
       // for(; i<tmp.length; ++i) {
       //   var j = 0;
@@ -62,7 +62,7 @@
       }).then(function (result) {
         let items = result.data;
 
-        console.log(items);
+        console.log('Result data: ', items);
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
         // return processed items
