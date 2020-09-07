@@ -46,8 +46,8 @@
       //     list.found.push(tmp[i][j]);
       //   }
       // }
-      console.log('Json: ');
-      console.log(tmp);
+      console.log('Json value: ');
+      console.log(tmp.value);
       // console.log(JSON.parse(tmp));
     }
 
