@@ -47,7 +47,8 @@
       //   }
       // }
       console.log('Json: ');
-      console.log(JSON.parse(tmp));
+      console.log(tmp);
+      // console.log(JSON.parse(tmp));
     }
 
   }
