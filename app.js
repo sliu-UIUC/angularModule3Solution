@@ -49,7 +49,7 @@
         var i, j; 
         console.log(items);
         for(i in items) {
-          var tmp = JSON.parse(i);
+          console.log('elem: ', i)
           for(j in i) {
             console.log(j);
           }
