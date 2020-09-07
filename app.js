@@ -43,6 +43,7 @@
             list.found.push(item);
           }
         }
+        
        //  list.found = items; 
        console.log("Found: ", list.found);
       });
