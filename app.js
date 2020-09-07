@@ -36,7 +36,7 @@
     }
 
     list.getItems = function(searchTerm) {
-      list.found = JSON.parse(searchListService.getMatchedItems());
+      var tmp = searchListService.getMatchedItems();
       // console.log(searchListService.getMatchedItems());
       // var i = 0;
       // for(; i<tmp.length; ++i) {
@@ -46,7 +46,7 @@
       //     list.found.push(tmp[i][j]);
       //   }
       // }
-      console.log('Found: ',list.found);
+      console.log('Found: ',JSON.parse(tmp));
     }
 
   }
