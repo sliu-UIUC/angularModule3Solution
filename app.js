@@ -47,11 +47,11 @@
       searchListService.getMatchedItems().then(function(items){
         list.found = items;
         var i, j; 
-        
-        console.log('Menu11:', items['menu_items'].slice(1));
-        for(i in items['menu_items']) {
-          console.log('item', i);
-        }
+
+        console.log('Menu:', items['menu_items'][0]);
+        // for(i in items['menu_items']) {
+        //   console.log('item', i);
+        // }
 
       });
     }
