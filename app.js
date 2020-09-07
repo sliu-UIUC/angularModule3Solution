@@ -31,9 +31,10 @@
     list.searchTerm = "";
     list.found = [];
 
-    list.removeItem = function(index) {
-      list.found.splice(index,1);
+    list.removeItem = function(index, items) {
+      items.splice(index,1);
     }
+    
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
