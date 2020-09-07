@@ -39,14 +39,9 @@
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
         list.found = items;
-        console.log(list.searchTerm)
+      
        //  list.found = items; 
-       var l, i; 
-       for(l in items.value) {
-         for(i in l.value) {
-           console.log(i);
-         }
-       }
+       console.log("length: ", items.length )
       });
     }
   }
