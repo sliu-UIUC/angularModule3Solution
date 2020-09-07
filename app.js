@@ -37,13 +37,9 @@
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
-        var l, item;
-        for(l in items) {
-          for(item in l) {
-            list.found.push(item);
-          }
-        }
-        
+        list.found = items;
+    
+
        //  list.found = items; 
        console.log("Found: ", list.found);
       });
