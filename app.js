@@ -47,7 +47,7 @@
       searchListService.getMatchedItems().then(function(items){
         list.found = items;
         var i, j; 
-        console.log(items);
+        console.log(items[0]);
         for(i in items) {
           console.log('elem: ', i)
           for(j in i) {
