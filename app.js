@@ -39,7 +39,6 @@
       searchListService.getMatchedItems().then(function(items){
         list.found = items;
     
-
        //  list.found = items; 
        console.log("Found: ", list.found);
       });
