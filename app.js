@@ -36,12 +36,12 @@
     }
 
     list.getItems = function(searchTerm) {
-      var tmp = searchListService.getMatchedItems();
-
-      console.log('Json value: ');
-      console.log(tmp);
-      console.log('aaa');
-    }
+      searchListService.getMatchedItems().then(function(items){
+        var tmp = items;
+        console.log('Json value: ');
+        console.log(tmp);
+        console.log('aaa');
+      });
 
   }
 
