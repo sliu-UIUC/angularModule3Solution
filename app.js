@@ -37,9 +37,7 @@
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
-        while(itmes==undefined) {
-          
-        }
+
         var tmp = items;
         console.log('Json value: ');
         console.log(tmp);
