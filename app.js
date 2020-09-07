@@ -55,7 +55,7 @@
         url: ApiBasePath
       }).then(function (result) {
         let items = result.data;
-        console.log(items);
+        console.log('Items: ', items[0]);
         // console.log('Result data: ', JSON.parse(items));
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
