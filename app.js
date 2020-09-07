@@ -47,12 +47,11 @@
       searchListService.getMatchedItems().then(function(items){
         list.found = items;
         var i, j; 
-
         console.log('Menu:', items['menu_items']);
         for(i in items['menu_items']) {
           console.log('item', i);
         }
-        
+
       });
     }
   }
