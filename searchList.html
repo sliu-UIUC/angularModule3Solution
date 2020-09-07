@@ -1,8 +1,7 @@
 <ol>
   <div ng-repeat="items in list.found">
-
       <li ng-repeat="item in items">
-        <p ng-if="item.name.contains(list.searchTerm)">{{item.name}}</p>
+        <p ng-if="item.name.includes(list.searchTerm)">{{item.name}}</p>
         <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
       </li>
   </div>
