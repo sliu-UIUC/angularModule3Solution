@@ -29,10 +29,14 @@
     var list = this;
     
     list.searchTerm = "";
-    list.found = searchListService.getMatchedItems(list.searchTerm);
+    list.found = [];
 
     list.removeItem = function(index) {
       list.found.splice(index,1);
+    }
+
+    list.getItems = function(searchTerm) {
+      list.found = searchListService.getMatchedItems(searchTerm);
     }
 
   }

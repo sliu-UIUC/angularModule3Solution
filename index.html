@@ -16,7 +16,7 @@
         <input type="text" placeholder="search term" class="form-control" ng-model="list.searchTerm">
       </div>
       <div class="form-group narrow-button">
-        <button class="btn btn-primary">Narrow It Down For Me!</button>
+        <button class="btn btn-primary" ng-click="list.getItems(list.searchTerm)">Narrow It Down For Me!</button>
       </div>
       <br> 
 
