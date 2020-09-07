@@ -39,7 +39,8 @@
       searchListService.getMatchedItems().then(function(items){
         var tmp = items;
         console.log('Json value: ');
-        console.log(JSON.parse(tmp));
+        console.log(tmp.value);
+        console.log('length: ', tmp.length);
       });
     }
   }
