@@ -47,8 +47,8 @@
       //   }
       // }
       console.log('Json value: ');
-      console.log('aaaaaa', tmp.$$state.value);
-      // console.log(JSON.parse(tmp));
+      console.log(tmp.$$state.value);
+      console.log('aaa');
     }
 
   }
