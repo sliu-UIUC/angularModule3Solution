@@ -38,10 +38,9 @@
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
 
-        var tmp = items;
-        console.log('Json value: ');
-        console.log(tmp);
-        
+       list.found = items; 
+       console.log("Found: ", list.found);
+       
       });
     }
   }
