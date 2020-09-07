@@ -42,7 +42,7 @@
         console.log(tmp);
         console.log('aaa');
       });
-
+    }
   }
 
   searchListService.$inject = ['$http', 'ApiBasePath']; 
