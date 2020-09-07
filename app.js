@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  
+   
   angular.module('searchListApp', [])
   .controller('searchListController', searchListController)
   .service('searchListService', searchListService)
@@ -65,8 +65,7 @@
         console.log('Error: cannot get menu items.');
       });
     }
-    
-    
+  
   }
   
   })();
