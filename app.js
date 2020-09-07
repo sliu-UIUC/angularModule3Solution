@@ -36,7 +36,13 @@
     }
 
     list.getItems = function(searchTerm) {
-      list.found = searchListService.getMatchedItems(searchTerm);
+      var tmp = searchListService.getMatchedItems(searchTerm);
+      for(l in tmp) {
+        for(item in l) {
+          list.found.push(item);
+        }
+      }
+      console.log(list.found);
     }
 
   }
@@ -51,17 +57,12 @@
         url: ApiBasePath
       }).then(function (result) {
         let items = result.data;
-        var ret = [];
-        for(l in items) {
-          for(elem in l) {
-            ret.push(elem);
-          }
-        }
-        console.log(ret);
+
+        console.log(items);
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
         // return processed items
-        return ret;
+        return items;
       }).catch(function(error){
         console.log('Error: cannot get menu items.');
       });
