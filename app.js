@@ -40,6 +40,8 @@
 
     list.addItem = function(item) {
       list.found.push(item);
+      console.log(item);
+      
     }
 
     list.getItems = function(searchTerm) {
