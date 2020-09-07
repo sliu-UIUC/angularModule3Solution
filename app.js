@@ -39,7 +39,7 @@
       searchListService.getMatchedItems().then(function(items){
         var tmp = items;
         console.log('Json value: ');
-        console.log(tmp);
+        console.log(tmp[0]);
         console.log('aaa');
       });
     }
@@ -55,7 +55,6 @@
         url: ApiBasePath
       }).then(function (result) {
         let items = result.data;
-        console.log('Items: ', items[0]);
         // console.log('Result data: ', JSON.parse(items));
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
