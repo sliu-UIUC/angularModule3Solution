@@ -40,12 +40,12 @@
 
     list.addItem = function(item) {
       list.found.push(item);
-      
+
     }
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
-        list.data = items;
+        list.found = items;
       });
     }
   }
