@@ -40,6 +40,7 @@
       var i = 0;
       for(; i<tmp.length; ++i) {
         var j = 0;
+        console.log(tmp[i]);
         for(;j<tmp[i].length;++j) {
           list.found.push(tmp[i][j]);
         }
