@@ -39,7 +39,7 @@
       var tmp = searchListService.getMatchedItems();
 
       console.log('Json value: ');
-      console.log(tmp.value);
+      console.log(tmp);
       console.log('aaa');
     }
 
