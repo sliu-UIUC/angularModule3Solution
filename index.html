@@ -20,8 +20,13 @@
           class="btn btn-primary" 
           ng-click="list.getItems(list.searchTerm)"
         >
-          Narrow It Down For Me!!
+          Narrow It Down For Me!!!
         </button>
+      </div>
+      <div ng-repeat="items in list.data">
+        <div ng-repeat="item in items">
+          {{list.addItem(item)}}
+        </div>
       </div>
       <br>
 
