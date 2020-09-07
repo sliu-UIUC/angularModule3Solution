@@ -36,9 +36,9 @@
     }
 
     list.getItems = function(searchTerm) {
-      var tmp = searchListService.getMatchedItems(searchTerm);
-      for(l in tmp) {
-        for(item in l) {
+      var tmp = searchListService.getMatchedItems();
+      for(var l in tmp) {
+        for(var item in l) {
           list.found.push(item);
         }
       }
@@ -51,7 +51,7 @@
   function searchListService($http, ApiBasePath) {
     var service = this;
 
-    service.getMatchedItems = function(searchTerm) {
+    service.getMatchedItems = function() {
       return $http({
         method: 'GET', 
         url: ApiBasePath
