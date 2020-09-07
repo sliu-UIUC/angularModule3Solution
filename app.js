@@ -49,8 +49,9 @@
         var i, j; 
         console.log(items);
         for(i in items) {
+          var tmp = JSON.parse(i);
           for(j in i) {
-            console.log(j.name);
+            console.log(j);
           }
         }
       });
