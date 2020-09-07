@@ -49,7 +49,7 @@
         var i, j; 
         console.log(items['menu_items']);
         for(i in items['menu_items']) {
-          console.log(i);
+          console.log('item', i);
         }
       });
     }
