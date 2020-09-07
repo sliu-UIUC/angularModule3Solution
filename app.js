@@ -36,7 +36,7 @@
     }
 
     list.getItems = function(searchTerm) {
-      list.found = searchListService.getMatchedItems();
+      list.found = searchListService.getMatchedItems()[0];
       // console.log(searchListService.getMatchedItems());
       // var i = 0;
       // for(; i<tmp.length; ++i) {
@@ -66,7 +66,7 @@
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
         // return processed items
-        return items;
+        return JSON.parse(items);
       }).catch(function(error){
         console.log('Error: cannot get menu items.');
       });
