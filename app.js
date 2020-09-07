@@ -15,9 +15,9 @@
           searchTerm: '<',
           onRemove : '&'
       }, 
-      // controller: searchListController, 
-      // controllerAs: 'list',
-      // bindToController: false
+      controller: searchListController, 
+      controllerAs: 'list',
+      bindToController: true
     };
     return ddo;
   }
@@ -37,6 +37,7 @@
 
     list.getItems = function(searchTerm) {
       list.found = searchListService.getMatchedItems(searchTerm);
+      console.log(list.found);
     }
 
   }
@@ -51,7 +52,6 @@
         url: ApiBasePath
       }).then(function (result) {
         let items = result.data[0];
-        console.log(items);
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
         // return processed items
