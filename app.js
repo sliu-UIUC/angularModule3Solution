@@ -37,7 +37,6 @@
 
     list.getItems = function(searchTerm) {
       list.found = searchListService.getMatchedItems(searchTerm);
-      console.log(list.found);
     }
 
   }
@@ -51,11 +50,18 @@
         method: 'GET', 
         url: ApiBasePath
       }).then(function (result) {
-        let items = result.data[0];
+        let items = result.data;
+        var ret = [];
+        for(l in items) {
+          for(elem in l) {
+            ret.push(elem);
+          }
+        }
+        console.log(ret);
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
         // return processed items
-        return items;
+        return ret;
       }).catch(function(error){
         console.log('Error: cannot get menu items.');
       });
