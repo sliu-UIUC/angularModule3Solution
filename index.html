@@ -20,12 +20,21 @@
           class="btn btn-primary" 
           ng-click="list.getItems(list.searchTerm)"
         >
-          Narrow It Down For Me!!!!
+          Narrow It Down For Me!!
         </button>
       </div>
       <br> 
 
+      <ol>
+        <div ng-repeat="items in list.found">
+            <li ng-repeat="item in items">
+              {{list.addItem(item)}}
+            </li>
+        </div>
+      </ol>
+
       <search-list
+        data = "list.data"
         found = "list.found"
         search-term = "list.searchTerm"
         on-remove = "list.removeItem(index)"

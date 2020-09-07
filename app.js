@@ -11,6 +11,7 @@
     var ddo = {
       templateUrl: 'searchList.html', 
       scope: {
+          data: '<',
           found: '<',
           searchTerm: '<',
           onRemove : '&'
@@ -30,19 +31,20 @@
     
     list.searchTerm = "";
     list.found = [];
+    list.data = [];
 
     list.removeItem = function(index) {
       list.found.splice(index,1);
     }
 
 
+    list.addItem = function(item) {
+      list.found.push(item);
+    }
+
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
-        list.found = items;
-      
-        
-       //  list.found = items; 
-       console.log("length: ", items.length )
+        list.data = items;
       });
     }
   }
