@@ -40,7 +40,6 @@
 
        list.found = items; 
        console.log("Found: ", list.found);
-       
       });
     }
   }
