@@ -40,6 +40,7 @@
         var tmp = items;
         console.log('Json value: ');
         console.log(tmp.value);
+        
         console.log('length: ', tmp.length);
       });
     }
