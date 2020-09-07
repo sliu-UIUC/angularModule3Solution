@@ -40,6 +40,7 @@
       searchListService.getMatchedItems().then(function(items){
         list.found = items;
       
+        
        //  list.found = items; 
        console.log("length: ", items.length )
       });
