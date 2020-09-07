@@ -50,7 +50,7 @@
         method: 'GET', 
         url: ApiBasePath
       }).then(function (result) {
-        let items = result.data;
+        let items = result.data[0];
         console.log(items);
         // process result and only keep items that match
         // var foundItems = items.filter(function(str){return str.include(searchTerm)});
