@@ -37,7 +37,7 @@
     }
 
 
-    list.isFoundEmpty = true;
+    list.isFoundEmpty = false;
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
