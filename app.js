@@ -37,14 +37,19 @@
       list.found.splice(index,1);
     }
 
+    list.nothingEntered = function() {
+      return list.searchTerm=="";
+    }
+
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
         list.found = [];
         let menu = items['menu_items'];
-        
-        for(var i =0; i<menu.length;++i) {
-          if(menu[i].description.includes(searchTerm)) {
-            list.found.push(menu[i]);
+        if(searchTerm!="") {
+          for(var i =0; i<menu.length;++i) {
+            if(menu[i].description.includes(searchTerm)) {
+              list.found.push(menu[i]);
+            }
           }
         }
 
