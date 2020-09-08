@@ -53,7 +53,6 @@
         } else {
           list.nothingEntered = false;
         }
-
       });
     }
   }
