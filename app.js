@@ -41,7 +41,6 @@
       searchListService.getMatchedItems().then(function(items){
         list.found = [];
         let menu = items['menu_items'];
-        console.log('Menu:', items['menu_items'][0]);
         for(var i =0; i<menu.length;++i) {
           if(menu[i].name.includes(searchTerm)) {
             list.found.push(menu[i]);
