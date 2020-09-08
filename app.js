@@ -36,7 +36,7 @@
       list.found.splice(index,1);
     }
 
-    list.nothingEntered = false;
+    list.nothingEntered = true;
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
