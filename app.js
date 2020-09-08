@@ -48,7 +48,6 @@
             list.found.push(menu[i]);
           }
         }
-
       });
     }
   }
