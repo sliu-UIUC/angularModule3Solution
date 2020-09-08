@@ -51,8 +51,9 @@
           }
         }
 
-      });
+      }); 
     }
+    
   }
 
   searchListService.$inject = ['$http', 'ApiBasePath']; 
