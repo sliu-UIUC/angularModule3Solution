@@ -37,12 +37,6 @@
       list.found.splice(index,1);
     }
 
-
-    list.addItem = function(item) {
-      list.found.push(item);
-
-    }
-
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
         // list.found = items;
@@ -50,6 +44,7 @@
         console.log('Menu:', items['menu_items'][0]);
         for(var i =0; i<menu.length;++i) {
           console.log('item: ', menu[i]);
+          list.found.push(menu[i]);
         }
 
       });
