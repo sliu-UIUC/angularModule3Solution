@@ -47,11 +47,13 @@
             list.found.push(menu[i]);
           }
         }
+        
         if(list.found==[] || searchTerm=="") {
           list.nothingEntered = true;
         } else {
           list.nothingEntered = false;
         }
+
       });
     }
   }
