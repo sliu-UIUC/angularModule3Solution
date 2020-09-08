@@ -37,7 +37,7 @@
     }
 
 
-    list.isFoundEmpty = Array.isArray(list.found) && list.found.length
+    list.isFoundEmpty = true;
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
@@ -47,9 +47,10 @@
         for(var i =0; i<menu.length;++i) {
           if(searchTerm!=""  && menu[i].description.includes(searchTerm)) {
             list.found.push(menu[i]);
+            list.isFoundEmpty = false;
           }
         }
-
+        if(!list.found.length) list.isFoundEmpty = true;
       }); 
     }
 
