@@ -47,8 +47,12 @@
             list.found.push(menu[i]);
           }
         }
-        console.log(list.found==[]);
-        list.somethingEntered = (!list.found==[]);
+        console.log(list.found);
+        if(list.found.length) {
+          somethingEntered = true;
+        } else {
+          somethingEntered = false;
+        }
       }); 
     }
 
