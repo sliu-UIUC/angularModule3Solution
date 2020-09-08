@@ -37,8 +37,8 @@
     }
 
     var noclick = true;
-    list.nothingEntered = function() {
-      return !noclick || !list.found.length;
+    list.somethingEntered = function() {
+      return noclick || (!noclick && list.found.length);
     }
 
     list.getItems = function(searchTerm) {
