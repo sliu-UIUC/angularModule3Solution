@@ -36,7 +36,7 @@
       list.found.splice(index,1);
     }
 
-    list.nothingEntered = true;
+    list.nothingEntered = false;
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
@@ -50,9 +50,12 @@
 
         if(list.found==[] || searchTerm=="") {
           list.nothingEntered = true;
+          console.log("Nothing!!")
         } else {
           list.nothingEntered = false;
+          console.log('Something!')
         }
+
       });
     }
   }
