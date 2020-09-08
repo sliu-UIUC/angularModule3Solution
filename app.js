@@ -47,7 +47,7 @@
             list.found.push(menu[i]);
           }
         }
-        console.log(list.found);
+        console.log(list.length);
         if(list.found.length) {
           list.somethingEntered = true;
         } else {
