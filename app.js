@@ -37,7 +37,7 @@
     }
 
     list.nothingEntered = function() {
-      return list.found==[];
+      return !list.found.length;
     }
 
     list.getItems = function(searchTerm) {
@@ -53,7 +53,7 @@
 
       }); 
     }
-    
+
   }
 
   searchListService.$inject = ['$http', 'ApiBasePath']; 
