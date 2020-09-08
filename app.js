@@ -45,13 +45,12 @@
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
-        list.found = items;
-        var i, j; 
-
+        // list.found = items;
+        let menu = items['menu_items'];
         console.log('Menu:', items['menu_items'][0]);
-        // for(i in items['menu_items']) {
-        //   console.log('item', i);
-        // }
+        for(var i =0; i<menu.length;++i) {
+          console.log('item: ', menu[i]);
+        }
 
       });
     }
