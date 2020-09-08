@@ -27,8 +27,7 @@
   searchListController.$inject = ['searchListService'];
   function searchListController( searchListService) {
 
-    var list = this;
-    
+    var list = this;    
     list.searchTerm = "";
     list.found = [];
     list.data = [];
