@@ -14,6 +14,7 @@
           data: '<',
           found: '<',
           searchTerm: '<',
+          notFound : '&',
           onRemove : '&'
       }, 
       controller: searchListController, 
@@ -34,6 +35,11 @@
 
     list.removeItem = function(index) {
       list.found.splice(index,1);
+    }
+
+
+    list.isFoundEmpty = function() {
+      return list.found==[];
     }
 
     list.getItems = function(searchTerm) {
