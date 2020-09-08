@@ -43,11 +43,11 @@
         list.found = [];
         let menu = items['menu_items'];
         for(var i =0; i<menu.length;++i) {
-          if(menu[i].description.includes(searchTerm)) {
+          if(searchTerm!=""  && menu[i].description.includes(searchTerm)) {
             list.found.push(menu[i]);
           }
         }
-        
+
         if(list.found==[] || searchTerm=="") {
           list.nothingEntered = true;
         } else {
