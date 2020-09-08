@@ -39,7 +39,6 @@
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
-        // list.found = items;
         list.found = [];
         let menu = items['menu_items'];
         console.log('Menu:', items['menu_items'][0]);
@@ -48,7 +47,7 @@
             list.found.push(menu[i]);
           }
         }
-        
+
       });
     }
   }
