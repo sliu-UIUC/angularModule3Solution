@@ -30,17 +30,14 @@
 
     var list = this;    
     list.searchTerm = "";
-    list.found = [];
-    list.data = [];
+    list.found = Array();
 
     list.removeItem = function(index) {
       list.found.splice(index,1);
     }
 
 
-    list.isFoundEmpty = function() {
-      return list.found==[];
-    }
+    list.isFoundEmpty = Array.isArray(list.found) && list.found.length
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
