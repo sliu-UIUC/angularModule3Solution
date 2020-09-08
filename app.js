@@ -36,22 +36,22 @@
       list.found.splice(index,1);
     }
 
-    list.nothingEntered = function() {
-      return list.searchTerm=="";
-    }
+    list.nothingEntered = false;
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
         list.found = [];
         let menu = items['menu_items'];
-        if(!list.nothingEntered()) {
-          for(var i =0; i<menu.length;++i) {
-            if(menu[i].description.includes(searchTerm)) {
-              list.found.push(menu[i]);
-            }
+        for(var i =0; i<menu.length;++i) {
+          if(menu[i].description.includes(searchTerm)) {
+            list.found.push(menu[i]);
           }
         }
-
+        if(list.found==[] || searchTerm=="") {
+          list.nothingEntered = true;
+        } else {
+          list.nothingEntered = false;
+        }
       });
     }
   }
