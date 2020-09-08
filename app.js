@@ -42,13 +42,15 @@
       searchListService.getMatchedItems().then(function(items){
         list.found = [];
         let menu = items['menu_items'];
+        var added = false;
         for(var i =0; i<menu.length;++i) {
           if(searchTerm!=""  && menu[i].description.includes(searchTerm)) {
             list.found.push(menu[i]);
+            added = true;
           }
         }
-        console.log(list.length);
-        if(list.found.length) {
+    
+        if(searchTerm!="" || added) {
           list.somethingEntered = true;
         } else {
           list.somethingEntered = false;
