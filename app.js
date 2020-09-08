@@ -42,7 +42,7 @@
         list.found = [];
         let menu = items['menu_items'];
         for(var i =0; i<menu.length;++i) {
-          if(menu[i].name.includes(searchTerm)) {
+          if(menu[i].description.includes(searchTerm)) {
             list.found.push(menu[i]);
           }
         }
