@@ -49,9 +49,9 @@
         }
         console.log(list.found);
         if(list.found.length) {
-          somethingEntered = true;
+          list.somethingEntered = true;
         } else {
-          somethingEntered = false;
+          list.somethingEntered = false;
         }
       }); 
     }
