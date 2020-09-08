@@ -14,7 +14,7 @@
           data: '<',
           found: '<',
           searchTerm: '<',
-          notFound : '&',
+          notFound : '<',
           onRemove : '&'
       }, 
       controller: searchListController, 
