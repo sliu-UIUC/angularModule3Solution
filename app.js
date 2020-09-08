@@ -36,22 +36,19 @@
       list.found.splice(index,1);
     }
 
-    var noclick = true;
-    list.somethingEntered = function() {
-      return noclick || (!noclick && list.found.length);
-    }
+    list.somethingEntered = true;
 
     list.getItems = function(searchTerm) {
       searchListService.getMatchedItems().then(function(items){
         list.found = [];
         let menu = items['menu_items'];
-        noclick = false;
         for(var i =0; i<menu.length;++i) {
           if(searchTerm!=""  && menu[i].description.includes(searchTerm)) {
             list.found.push(menu[i]);
           }
         }
-
+        console.log(list.found==[]);
+        list.somethingEntered = (!list.found==[]);
       }); 
     }
 
